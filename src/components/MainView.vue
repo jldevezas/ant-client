@@ -1,7 +1,7 @@
 <template>
   <!-- <about-link link-text="Sobre" link-path="about"></about-link> -->
-  <div class="wrapper flex">  
-    <div class="full">   
+  <div class="wrapper flex">
+    <div class="full">
       <a v-link="{name: 'home'}" id="logo-link" title="ANT - Pesquisa de Informação na Universidade do Porto">
         ANT - Pesquisa de Informação na Universidade do Porto
       </a>
@@ -23,6 +23,7 @@
     </div>
   </div>
   <div id="footer" class="center-text">
+    <span class="footer-link"><a href="https://datastudio.google.com/s/lYAVF98oPSI" class="link-highlight">Estatísticas</a></span>
     <span class="footer-link"><a v-link="{name: 'embed'}" class="link-highlight">Incorporar o ANT na minha página</a></span>
     <span class="footer-link"><a href="http://infolab.fe.up.pt">FEUP InfoLab</a></span>
     <span class="footer-link"><a v-link="{name: 'about'}">Sobre</a></span>
@@ -58,7 +59,7 @@ export default {
 }
 </script>
 
-<style lang="scss"> 
+<style lang="scss">
   .wrapper {
     padding: 150px 10px 60px 10px;
     .form-container {
