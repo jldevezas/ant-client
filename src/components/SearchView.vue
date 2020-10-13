@@ -15,10 +15,10 @@
     <div class="content-wrap-results">
       <search-tools :filter-data="data.queryData.filteredFacetsCount" v-if="data.queryData"></search-tools>
       <feedback-button></feedback-button>
-      <div class="cw"> 
+      <div class="cw">
         <div class="results-wrapper">
           <result-empty v-if="dataReceived && !data.entities.length"></result-empty>
-          <div v-if="data.queryData && data.queryData.count > 0">        
+          <div v-if="data.queryData && data.queryData.count > 0">
             <result-counter
               :count="data.queryData.count"
               :time-to-search="timeToSearch">
@@ -42,6 +42,7 @@
     </div>
   </div>
   <div id="footer" class="center-text">
+    <span class="footer-link"><a href="https://datastudio.google.com/s/lYAVF98oPSI" class="link-highlight">Estatísticas</a></span>
     <span class="footer-link"><a v-link="{name: 'embed'}" class="link-highlight">Incorporar o ANT na minha página</a></span>
     <span class="footer-link"><a href="http://infolab.fe.up.pt">FEUP InfoLab</a></span>
     <span class="footer-link"><a v-link="{name: 'about'}">Sobre</a></span>
