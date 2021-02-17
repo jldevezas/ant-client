@@ -1,4 +1,5 @@
 <template>
+  <sunset-notice></sunset-notice>
   <!-- <about-link link-text="Sobre" link-path="about"></about-link> -->
   <div class="wrapper flex">
     <div class="full">
@@ -36,6 +37,7 @@ import SearchForm from './SearchForm'
 import LatestNews from './LatestNews'
 import UpcomingEvents from './UpcomingEvents'
 import AboutLink from './AboutLink'
+import SunsetNotice from './SunsetNotice'
 
 export default {
   name: 'MainView',
@@ -43,7 +45,8 @@ export default {
     SearchForm,
     LatestNews,
     UpcomingEvents,
-    AboutLink
+    AboutLink,
+    SunsetNotice
   },
   data () {
     return {

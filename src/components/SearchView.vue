@@ -1,4 +1,5 @@
 <template>
+  <sunset-notice></sunset-notice>
   <!-- <about-link link-text="Sobre" link-path="about"></about-link> -->
   <div id="search">
     <div id="header-wrapper">
@@ -14,6 +15,7 @@
     </div>
     <div class="content-wrap-results">
       <search-tools :filter-data="data.queryData.filteredFacetsCount" v-if="data.queryData"></search-tools>
+      <sunset-search-redirect :query="$route.query.q"></sunset-search-redirect>
       <feedback-button></feedback-button>
       <div class="cw">
         <div class="results-wrapper">
@@ -64,6 +66,8 @@ import FeedButton from './FeedButton'
 import SearchTools from './SearchTools'
 import FeedbackButton from './FeedbackButton'
 import QuickResult from './QuickResult'
+import SunsetNotice from './SunsetNotice'
+import SunsetSearchRedirect from './SunsetSearchRedirect'
 
 export default {
   components: {
@@ -77,7 +81,9 @@ export default {
     FeedButton,
     SearchTools,
     FeedbackButton,
-    QuickResult
+    QuickResult,
+    SunsetNotice,
+    SunsetSearchRedirect
   },
 
   data () {

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueCookies from 'vue-cookies'
 
 import Locales from './locales/locales'
 
@@ -16,8 +17,11 @@ import NotFoundView from './components/NotFoundView'
 Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(VueI18n)
+Vue.use(VueCookies)
 
 Vue.config.lang = 'pt'
+
+Vue.$cookies.config('1d')
 
 // set locales
 Object.keys(Locales).forEach(function (lang) {
@@ -29,7 +33,7 @@ let router = new VueRouter(
     history: true
     // root: '/beta/'
   }
-  )
+)
 
 router.map({
   '/': {
